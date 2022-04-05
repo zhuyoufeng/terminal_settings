@@ -1,22 +1,23 @@
-# Tmux 配置：打造最适合自己的终端复用工具
+## vim 使用：
+安装vim plug
+```
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
 
-                             __  __      _____
-                            |  \/  |_   |_   _| __ ___  _   ___  __
-                            | |\/| | | | || || '_ ` _ \| | | \ \/ /
-                            | |  | | |_| || || | | | | | |_| |>  <
-                            |_|  |_|\__, ||_||_| |_| |_|\__,_/_/\_\
-                                    |___/
+Add a vim-plug section to your ~/.vimrc (or stdpath('config') . '/init.vim' for Neovim)
+
+- Begin the section with call plug#begin([PLUGIN_DIR])
+- List the plugins with Plug commands
+- call plug#end() to update &runtimepath and initialize plugin system
+- Automatically executes filetype plugin indent on and syntax enable. You can revert the settings after the call. e.g. filetype indent off, syntax off, etc.
+- Reload .vimrc and :PlugInstall to install plugins.
 
 
-
-## 截图:
-
-![](https://blog-1256335675.cos.ap-chengdu.myqcloud.com/2019-06-20-161234.png)
-
-## 使用:
+## tmux 使用: forked from https://github.com/zuorn/tmux.conf
 
 ```
-$ git clone https://github.com/zuorn/tmux.conf
+$ git clone 
 $ cp tmux-config/.tmux.conf ~/.tmux.conf
 ```
 重启 tmux `restart tmux` 或者 在 tmux 窗口中，先按下 `Ctrl+b` 指令前缀，然后按下系统指令:，进入到命令模式后输入 `source-file ~/.tmux.conf`，回车后生效。
